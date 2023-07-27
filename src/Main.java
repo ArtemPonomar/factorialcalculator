@@ -11,9 +11,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Main {
 
-    public static final String INPUT_FILE_NAME = "input.txt";
-    public static final String OUTPUT_FILE_NAME = "output.txt";
-    public static final int PERMITS_PER_SECOND = 100;
+    private static final String INPUT_FILE_NAME = "input.txt";
+    private static final String OUTPUT_FILE_NAME = "output.txt";
+    private static final int PERMITS_PER_SECOND = 100;
 
     public static void main(String[] args) {
         BlockingQueue<Integer> inputQueue = new LinkedBlockingDeque<>();
@@ -31,7 +31,6 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     private static int getThreadCountFromConsole() {

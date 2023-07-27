@@ -31,7 +31,6 @@ public class FactorialCalculator extends Thread {
                 List<Future<BigInteger>> futures = invokeTasksWithRateLimit(tasks);
                 BigInteger calculationResult = calculateResult(futures);
                 outputQueue.add(currentNumber + " = " + calculationResult);
-                System.out.println(currentNumber + " = " + calculationResult); //todo remove debugging line
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

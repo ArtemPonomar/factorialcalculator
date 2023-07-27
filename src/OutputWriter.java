@@ -21,7 +21,6 @@ public class OutputWriter extends Thread{
                 outputWriter.write(line);
                 outputWriter.newLine();
                 outputWriter.flush();
-                System.out.println("line added to output file"); //todo remove debugging line
             } catch (IOException | NumberFormatException e) {
                 System.out.println(e.getMessage());
             }
